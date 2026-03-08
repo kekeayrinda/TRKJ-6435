@@ -116,6 +116,7 @@ docker run username/salam
 ## E. Hasil dan Pembahasan
 Hasil
 Lab1.1: Docker Image "hello-world"
+
 ![Docker Version](img/Docker%20Version.png)
 ![docker run hello-world](img/docker%20run%20hello-world.jpg)
 ![docker images hello](img/docker%20images%20hello.jpg)
