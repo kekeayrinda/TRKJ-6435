@@ -120,6 +120,8 @@ Lab1.1: Docker Image "hello-world"
 ![docker run hello-world](img/docker%20run%20hello-world.jpg)
 ![docker images hello](img/docker%20images%20hello.jpg)
 
+
+
 Hasil Lab 1.2 : Shell
 ![docker search alpine](img/docker%20search%20alpine.jpg)
 ![docker pull alpine](img/docker%20pull%20alpine.jpg)
