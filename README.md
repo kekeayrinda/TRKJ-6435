@@ -253,23 +253,31 @@ Hasil 5 DockerImage"node_project" :
 Membuat direktori dengan perintah mkdir lalu pin
 dahkedirektoritersebutdengancd(changedirectory).
 mkdir node_project
+
 ![node_project & cd node_project](img2/node_project.jpg)
+
 
 Cekinstalasinpmdenganperintahberikut:
 ![npm-v](img2/npm-v.jpg)
 
+
 Selesai instalasi npm, lakukannpm init dan hasilnya sebuah file teks
 ![npm init-y](img2/npm%20init.jpg)
 
+
 Periksa file yang terbentuk,dengan:
 ![ cat package.json](img2/)
+
+
 
 Filepackage.jsonakanditambahkanmodul"express"denganperintahberikut: "npm install express"
 ![ npm install express](img2/npm%20install%20express.jpg)
 
 
+
 Selanjutnya membuat sebuah file dengan nama index.js dan isi dengan kode berikut ini:
 ![ file index.js](img2/file%20index.js.jpg)
+
 
 
 Mengaktifkan file index.js
