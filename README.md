@@ -265,10 +265,6 @@ Selesai instalasi npm, lakukannpm init dan hasilnya sebuah file teks
 ![npm init-y](img2/npm%20init.jpg)
 
 
-Periksa file yang terbentuk,dengan:
-![ cat package.json](img2/)
-
-
 
 Filepackage.jsonakanditambahkanmodul"express"denganperintahberikut: "npm install express"
 ![ npm install express](img2/npm%20install%20express.jpg)
@@ -292,8 +288,7 @@ buka di web browser dengan url http://localhost:7000
 Selanjutnya  membuat Dockerfile menggunakan kode berikut ini:
 ![ Mengaktifkan file tu kan](img2/Docker%20File.jpg)
 ![ Mengaktifkan file tu kan](img2/docker%20tag.jpg)
-![ Mengaktifkan file tu kan](img2/docker%20tag%20(2)![ Mengaktifkan file tu kan](imge)
-)
+![ Mengaktifkan file tu kan](img2/docker%20tag%20(2)
 
 docker push
 docker run & docker ps
