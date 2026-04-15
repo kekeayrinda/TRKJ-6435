@@ -26,7 +26,7 @@ Kelas              : TRKJ-2A
 
 | No. Praktikum     | : | Lab 1 |
 |------------------:|:-:|:--------------|
-| Judul Praktikum   | : | Docker Image "hello-world" |
+| Judul Praktikum   | : | Dasar-Dasar Docker (Docker Image, Container, dan Docker Hub) |
 | Tanggal Praktikum | : | 05 Maret 2026|
 | Tanggal Penyerahan| : | 10 Maret 2026 |
 | Nama Praktikan    | : | Keke Ayrinda |
@@ -170,7 +170,7 @@ Docker berhasil digunakan untuk menjalankan image seperti hello-world dan memaha
 
 | No. Praktikum     | : | Lab 2 |
 |------------------:|:-:|:--------------|
-| Judul Praktikum   | : | Shell |
+| Judul Praktikum   | : | Pembuatan dan Deployment Aplikasi Node.js Menggunakan Docker |
 | Tanggal Praktikum | : | 02 April 2026|
 | Tanggal Penyerahan| : | 09 April 2026 |
 | Nama Praktikan    | : | Keke Ayrinda |
@@ -310,7 +310,7 @@ Pada praktikum ini, aplikasi Node.js berhasil dibuat dan dijalankan menggunakan 
 
 | No. Praktikum     | : | Lab 3 |
 |------------------:|:-:|:--------------|
-| Judul Praktikum   | : | Docker Volume |
+| Judul Praktikum   | : | Manajemen Penyimpanan Data dengan Docker Volume |
 | Tanggal Praktikum | : | 09 April 2026|
 | Tanggal Penyerahan| : | 16 April 2026 |
 | Nama Praktikan    | : | Keke Ayrinda |
@@ -478,7 +478,7 @@ Docker Volume berhasil digunakan untuk menyimpan data secara persisten serta mem
 
 | No. Praktikum     | : | Lab 4 |
 |------------------:|:-:|:--------------|
-| Judul Praktikum   | : | Multi Kontainer dengan docker-compose |
+| Judul Praktikum   | : | Multi Kontainer dengan komposisi docker |
 | Tanggal Praktikum | : | 16 April 2026|
 | Tanggal Penyerahan| : | 23 April 2026 |
 | Nama Praktikan    | : | Keke Ayrinda |
@@ -589,7 +589,7 @@ Muhammad Davi. Modul Praktikum Cloud Computing – Docker. Politeknik Negeri Lho
 
 | No. Praktikum     | : | Lab 5 |
 |------------------:|:-:|:--------------|
-| Judul Praktikum   | : | Multi Kontainer dengan docker-compose |
+| Judul Praktikum   | : | Judul |
 | Tanggal Praktikum | : | 16 April 2026|
 | Tanggal Penyerahan| : | 23 April 2026 |
 | Nama Praktikan    | : | Keke Ayrinda |
