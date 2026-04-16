@@ -508,116 +508,233 @@ Muhammad Davi, S.Kom., M.Cs.
 ---
 
 ## A. Tujuan Praktikum
-Tujuan dari praktikum ini adalah untuk memahami konsep dasar container menggunakan Docker serta cara mengelola image dan container. Selain itu, praktikum ini bertujuan agar mahasiswa mampu menjalankan container sederhana, membuat image Docker sendiri, serta menyimpan image tersebut ke Docker Hub. Mahasiswa juga diharapkan dapat memahami cara menjalankan aplikasi berbasis container menggunakan berbagai konfigurasi seperti volume, multi container, dan docker-compose.
+Memahami cara menjalankan dan mengelola beberapa container secara bersamaan menggunakan Docker Compose. Mahasiswa diharapkan mampu membuat konfigurasi multi container dalam file docker-compose.yml, serta mengintegrasikan beberapa layanan seperti WordPress dan MariaDB agar dapat berjalan secara terhubung. Selain itu, praktikum ini bertujuan untuk mempermudah proses deployment aplikasi yang terdiri dari lebih dari satu layanan secara otomatis dan efisien.
 
 ## B. Dasar Teori
-Docker merupakan platform containerization yang digunakan untuk membuat, menjalankan, dan mengelola aplikasi di dalam container. Container adalah lingkungan virtual ringan yang berisi semua dependensi yang diperlukan oleh sebuah aplikasi sehingga aplikasi dapat berjalan secara konsisten di berbagai sistem operasi.
+Docker Compose merupakan tool yang digunakan untuk menjalankan dan mengelola beberapa container secara bersamaan dalam satu konfigurasi. Dengan menggunakan Docker Compose, pengguna dapat mendefinisikan berbagai layanan aplikasi dalam satu file docker-compose.yml, sehingga memudahkan dalam proses deployment dan pengelolaan aplikasi.
 
-Docker menggunakan konsep image dan container. Image merupakan template yang berisi sistem operasi, library, serta aplikasi yang dibutuhkan. Sedangkan container adalah instance yang berjalan dari sebuah image. Dengan menggunakan Docker, proses deployment aplikasi menjadi lebih cepat, ringan, dan konsisten dibandingkan dengan virtual machine.
+Dalam konsep multi container, sebuah aplikasi biasanya terdiri dari beberapa layanan yang saling terhubung, seperti web server dan database. Pada praktikum ini digunakan WordPress sebagai layanan web dan MariaDB sebagai database, yang dijalankan secara bersamaan dan saling terintegrasi.
 
-Docker juga menyediakan layanan Docker Hub, yaitu repository online yang digunakan untuk menyimpan dan membagikan Docker image kepada pengguna lain. Dengan Docker Hub, pengguna dapat melakukan pull atau push image dengan mudah.
+Docker Compose juga menyediakan fitur seperti depends_on untuk mengatur urutan eksekusi container, serta konfigurasi port dan environment variable untuk menghubungkan antar layanan. Selain itu, penggunaan volume memungkinkan data disimpan secara persisten sehingga tidak hilang meskipun container dihentikan.
 
-Dalam pengembangan aplikasi modern, Docker sering digunakan bersama teknologi lain seperti Node.js, database container, serta docker-compose untuk menjalankan beberapa container sekaligus dalam satu sistem.
+Dengan demikian, Docker Compose sangat membantu dalam pengelolaan aplikasi yang kompleks karena memungkinkan banyak container dijalankan secara otomatis, terstruktur, dan lebih efisien dibandingkan menjalankan container secara manual satu per satu.
 
 ## C. Alat dan Bahan
 Alat dan bahan yang digunakan dalam praktikum ini adalah sebagai berikut:
+Alat:
 
-1. Laptop atau komputer yang telah terinstal sistem operasi Linux/Windows.
+1. Laptop/PC dengan sistem operasi (Windows/Linux).
+2. Docker Engine yang sudah terinstal.
+3. Docker Compose yang sudah terinstal.
+4. Terminal/Command Prompt.
+5. Text Editor (VS Code/Notepad++).
+6. Web Browser untuk mengakses aplikasi.
 
-2. Docker Engine yang telah terinstal pada sistem.
+Bahan:
 
-3. Akses internet untuk mengunduh Docker image dari Docker Hub.
-
-4. Docker Hub account untuk menyimpan dan membagikan image.
-
-5. Terminal atau command line.
-
-6. Text editor seperti VSCode atau Nano untuk membuat file program dan Dockerfile.
-
-7. Node.js dan npm untuk menjalankan aplikasi berbasis Node.js.
+1. Image WordPress sebagai layanan web.
+2. Image MariaDB sebagai database.
+3. File konfigurasi docker-compose.yml untuk mengatur multi container.
+4. Folder lokal (database dan html) untuk penyimpanan data (volume).
+5. Network Docker (default dari Docker Compose) untuk menghubungkan antar container.
 
 ## D. Langkah Kerja
-1. Memeriksa instalasi Docker dengan menjalankan perintah:
-docker version
+1. Membuat Direktori Project
 
-2. Memeriksa daftar image yang tersedia pada sistem:
-docker images
+2. Memeriksa Instalasi Docker Compose
 
-3. Menjalankan container menggunakan image hello-world:
-docker run hello-world
+3. Membuat File docker-compose.yml
 
-4. Mengunduh image Linux Alpine dari Docker Hub:
-docker pull alpine
+4. Menjalankan Multi Container
 
-5. Menjalankan container Alpine dalam mode interaktif:
-docker run -it alpine
+5. Melihat Status Container
 
-6. Membuat akun pada Docker Hub dan membuat repository baru.
+6. Melihat Log Aplikasi
 
-7. Membuat program sederhana menggunakan bahasa Go dan membuat file Dockerfile.
+7. Mengakses Aplikasi di Browser
 
-8. Membangun Docker image menggunakan perintah:
-docker build -t username/salam .
-
-9. Login ke Docker Hub dan mengunggah image:
-docker login
-docker push username/salam
-
-10. Menjalankan image dari Docker Hub menggunakan perintah:
-docker run username/salam
+8. Menghentikan dan Menghapus Container
 
 ## E. Hasil dan Pembahasan
-Hasil 5 DockerImage"node_project" :
+Hasil :
 
-Membuat direktori dengan perintah mkdir lalu pin
-dahkedirektoritersebutdengancd(changedirectory).
-mkdir node_project
-![node_project & cd node_project](img2/node_project.jpg)
+docker run hello-world :
+Menunjukkan bahwa Docker berjalan dengan baik dan berhasil menjalankan container sederhana.
+![docker run hello-world](img4/docker%20run%20hello-world.jpg)
 
-Cekinstalasinpmdenganperintahberikut:
-![npm-v](img2/npm-v.jpg)
+a. ls
+b. pwd
+c. whoami :
+Digunakan untuk mengecek direktori, lokasi kerja, dan user pada sistem/container.
+![ls, pwd, whoami](img4/ls%20pwd%20whoami.jpg)
 
-Selesai instalasi npm, lakukannpm init dan hasilnya sebuah file teks
-![npm init-y](img2/npm%20init.jpg)
+cek web browser localhost:8080 :
+Digunakan untuk memastikan layanan web dapat diakses melalui browser.
+![localhost:8080](img4/localhost8080.jpg)
 
-Periksa file yang terbentuk,dengan:
-![ cat package.json](img2/)
+Pastikan Docker jalan : docker --version
+docker ps :
+Untuk memastikan Docker terinstal dan melihat container yang sedang berjalan.
+![ docker --version docker ps ](img4/Docker%20Version%20&%20docker%20ps.jpg)
 
-Filepackage.jsonakanditambahkanmodul"express"denganperintahberikut: "npm install express"
-![ npm install express](img2/npm%20install%20express.jpg)
+Masuk ke folder project GitHub : cd "D:/SEMESTER 4/Komputasi Awan (Muhammad Davi)/Komputasi Awan/2026-trkj-2a-laporanpraktikum-cc-kekeayrinda", lalu Jalankan Ubuntu Container
+docker run -it ubuntu bash :
+Menjalankan container Ubuntu dalam mode interaktif untuk melakukan konfigurasi di dalamnya.
+![ docker run -it ubuntu bash ](img4/docker%20run%20-it%20ubuntu%20bash.jpg)
 
+apt update 
+![apt update](img4/Install%20NGINX%20di%20dalam%20container.jpg)
 
-Selanjutnya membuat sebuah file dengan nama index.js dan isi dengan kode berikut ini:
-![ file index.js](img2/file%20index.js.jpg)
+Install NGINX di dalam container  :
+Menginstall NGINX sebagai web server di dalam container.
+![apt install nginx -y](img4/apt%20install%20nginx%20-y.jpg)
 
+Cek nginx :
 
-Mengaktifkan file index.js
-![ Mengaktifkan file index.js](img2/node%20index.js.jpg)
+![ nginx -v ](img4/nginx%20-v.jpg)
 
+Jalankan NGINX :
+Memastikan NGINX terinstal dan berhasil dijalankan.
+![ service nginx start ](img4/service%20nginx%20start.jpg)
 
+apt update (curl) :
+![ apt update (curl) ](img4/apt%20update%20(curl).jpg)
 
-buka di web browser dengan url http://localhost:7000
-![ Mengaktifkan file tu kan](img2/output%20di%20web.jpg)
+apt install curl -y :
+![ apt install curl -y ](img4/apt%20install%20curl%20-y.jpg)
 
+Cek, curl localhost :
+Digunakan untuk menguji apakah web server berjalan dengan baik dari dalam container.
+![ curl localhost ](img4/curl%20localhost.jpg)
 
-Selanjutnya  membuat Dockerfile menggunakan kode berikut ini:
-![ Mengaktifkan file tu kan](img2/Docker%20File.jpg)
-![ Mengaktifkan file tu kan](img2/docker%20tag.jpg)
-![ Mengaktifkan file tu kan](img2/docker%20tag%20(2)![ Mengaktifkan file tu kan](imge)
-)
+Cek volume dulu, docker volume ls :
+Membuat dan memastikan volume sebagai media penyimpanan data.
+![ docker volume ls ](img4/docker%20volume%20ls.jpg)
 
-docker push
-docker run & docker ps
+Buat volume baru, docker volume create webdata :
+![ docker volume create webdata ](img4/docker%20volume%20create%20webdata.jpg)
 
-Selanjutnya  membuat Dockerfile menggunakan kode berikut ini:
+Cek lagi sampai muncul "webdata", docker volume ls :
+Membuat dan memastikan volume sebagai media penyimpanan data.
+![ docker volume ls ](img4/docker%20volume%20ls.jpg)
+
+Jalankan container nginx + volume :
+Menghubungkan container dengan volume agar data dapat disimpan secara persisten.
+![ Jalankan container nginx + volume ](img4/container%20nginx%20+%20volume.jpg)
+
+Cek container :
+![ docker ps ](img4/docker%20ps.jpg)
+
+Tes di Browser, localhost:8080 Before :
+![ localhost:8080 ](img4/Tes%20di%20Browser%20%20Before.jpg)
+
+Masuk ke container, docker exec -it web-nginx bash :
+Masuk ke dalam container untuk mengelola file web.
+![ docker exec -it web-nginx bash ](img4/docker%20exec%20-it%20web-nginx%20bash.jpg)
+
+Masuk folder web, cd /usr/share/nginx/html
+ls :
+![ Masuk folder web ](img4/Masuk%20folder%20web.jpg)
+
+Membuat File HTML (WAJIB LAB), apt update :
+Digunakan untuk membuat halaman web yang akan ditampilkan oleh NGINX.
+![ apt update ](img4/apt%20update%20buat%20file%20html.jpg)
+
+a. apt install nano -y 
+b. nano index.html :
+![ apt install nano -y dan nano index.html ](img4/apt%20install%20nano%20-y%20dan%20nano%20index.html.jpg)
+
+Isi nano index.html dengan ini: :
+![ Isi nano index.html dengan ini ](img4/Isi%20nano%20index.html.jpg)
+
+Bukti Volume Bekerja, Hapus container, docker rm -f web-nginx :
+Menguji bahwa data tetap ada setelah container dihapus, membuktikan volume bekerja.
+![ docker rm -f web-nginx ](img4/docker%20rm%20-f%20web-nginx.jpg)
+
+Jalankan lagi container baru :
+![ Jalankan lagi container baru ](img4/Jalankan%20lagi%20container%20baru.jpg)
+
+Buka lagi browser, localhost:8080 After 1 :
+Menunjukkan perubahan tampilan web dan keberhasilan penyimpanan data.
+![ localhost:8080 ](img4/Buka%20lagi%20browser%20After%201.jpg)
+
+Cek docker compose sudah ada :
+Memastikan Docker Compose sudah terinstal.
+![ docker compose version ](img4/docker%20compose%20version.jpg)
+
+Buat folder project compose
+Masuk ke folder repo kamu : cd "D:/SEMESTER 4/Komputasi Awan (Muhammad Davi)/Komputasi Awan/2026-trkj-2a-laporanpraktikum-cc-kekeayrinda", lalu Buat folder baru :
+![ mkdir lab3-compose cd lab3-compose ](img4/Buat%20folder%20baru%20mkdir%20lab3-compose.jpg)
+
+Buat file docker-compose.yml :
+Digunakan untuk mendefinisikan multi container (web dan database).
+![ nano docker-compose.yml ](img4/nano%20docker-compose.yml.jpg)
+
+Isi file docker-compose.yml dengan ini :
+![ isi file docker-compose ](img4/Isi%20docker-compose.yml%20dengan%20ini.jpg)
+
+Buat folder html (website)
+a. mkdir html
+b. cd html
+c. nano index.html :
+![ Buat folder html (website) ](img4/Buat%20folder%20html%20(website).jpg)
+
+Kembali ke folder compose cd .. :
+![ cd .. ](img4/cd%20...jpg)
+
+Jalankan multi container, docker compose up -d :
+Menjalankan beberapa container secara bersamaan.
+![ docker compose up -d ](img4/docker%20compose%20up%20-d.jpg)
+
+Jalankan multi container, docker compose up -d ke2 :
+![ docker compose up -d ke2 ](img4/docker%20compose%20up%20-d%20(2).jpg)
+
+Cek container, docker ps k2 :
+Melihat container yang aktif dari hasil Docker Compose.
+![ docker ps k2 ](img4/docker%20ps%20(2).jpg)
+
+Tes Web di browser, localhost:8081 After 2 :
+Membuktikan bahwa layanan web dari multi container berjalan.
+![ localhost:8081 After 2 ](img4/Tes%20Web%20di%20browser.jpg)
+
+Cek database container, docker ps ke3 :
+![ docker ps ke3 ](img4/docker%20ps%20(3).jpg)
+
+docker exec -it lab3-compose-database-1 bash :
+Masuk ke container database dan mengakses MySQL.
+![ Masuk ke mysql ](img4/docker%20exec%20-it%20lab3-compose-database-1%20bash.jpg)
+
+a. Masuk MySQL, mysql -u root -p
+b. Password, root :
+![ Masuk ke mysql ](img4/mysql%20-u%20root%20-p.jpg)
+
+Berhasil masuk ke mysql :
+![ Berhasil masuk ke mysql ](img4/MYSQL.jpg)
+
+Lalu, SHOW DATABASES; :
+
+Menampilkan database yang tersedia, menandakan database berjalan dengan baik.
+
+![ SHOW DATABASES; ](img4/SHOW%20DATABASES;.jpg)
+
+Stop semua container, docker compose down :
+Menghentikan dan menghapus semua container dari Docker Compose.
+![ docker compose down ](img4/docker%20compose%20down.jpg)
 
 ## F. Kesimpulan
+Docker Compose mempermudah pengelolaan dan menjalankan beberapa container secara bersamaan dalam satu konfigurasi. Dengan menggabungkan layanan seperti web server dan database, aplikasi dapat berjalan secara terintegrasi dan lebih efisien. Selain itu, penggunaan volume memastikan data tetap tersimpan secara persisten, sehingga tidak hilang meskipun container dihentikan atau dihapus.
 
 ## G. Analisa
+Docker Compose berhasil digunakan untuk menjalankan beberapa container secara bersamaan dan saling terhubung, seperti web server dan database. Proses konfigurasi melalui file docker-compose.yml mempermudah pengelolaan layanan karena semua pengaturan dilakukan dalam satu tempat.
+
+Pengujian menunjukkan bahwa layanan web dapat diakses melalui browser dan database dapat diakses melalui container, sehingga membuktikan bahwa komunikasi antar container berjalan dengan baik. Selain itu, penggunaan volume memastikan data tetap tersimpan meskipun container dihentikan atau dihapus, sehingga meningkatkan keandalan sistem.
 
 ## H. Referensi
-Muhammad Davi. Modul Praktikum Cloud Computing – Docker. Politeknik Negeri Lhokseumawe, 2024.
-
+1. Muhammad Davi. Modul Praktikum Cloud Computing – Docker. Politeknik Negeri Lhokseumawe, 2024.
+2. Docker Inc. (2023). Docker Documentation. https://docs.docker.com
+3. Docker Inc. (2023). Docker Compose Documentation. https://docs.docker.com/compose/
+4. WordPress.org. (2023). WordPress Documentation. https://wordpress.org
+5. MariaDB Foundation. (2023). MariaDB Documentation. https://mariadb.org
 
 
 <div align="center">
