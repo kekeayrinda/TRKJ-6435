@@ -845,3 +845,117 @@ Lab1.1: Docker Image "hello-world"
 
 ## H. Referensi
 Muhammad Davi. Modul Praktikum Cloud Computing – Docker. Politeknik Negeri Lhokseumawe, 2024.
+<<<<<<< HEAD
+=======
+
+
+
+<div align="center">
+---
+
+## Lembar Pengesahan
+
+
+| No. Praktikum     | : | Lab 5 |
+|------------------:|:-:|:--------------|
+| Judul Praktikum   | : | Judul |
+| Tanggal Praktikum | : | 16 April 2026|
+| Tanggal Penyerahan| : | 23 April 2026 |
+| Nama Praktikan    | : | Keke Ayrinda |
+| NIM/Kelas Praktikan| : | 2024903430012 / TRKJ-2A |
+| Nilai Praktikum   | : | .......................... |
+| Dosen Pengampu    | : | Muhammad Davi, S.Kom., M.Cs. |
+
+Mengetahui,  
+Dosen Pengampu
+<br><br><br><br><br>
+
+Muhammad Davi, S.Kom., M.Cs.
+</div>
+
+
+## Daftar Isi
+- [Lembar Pengesahan](#lembar-pengesahan)
+- [Daftar Isi](#daftar-isi)
+- [Tujuan Praktikum](#tujuan-praktikum)
+- [Dasar Teori](#dasar-teori)
+- [Alat dan Bahan](#alat-dan-bahan)
+- [Langkah Kerja](#langkah-kerja)
+- [Hasil dan Pembahasan](#hasil-dan-pembahasan)
+- [Kesimpulan](#kesimpulan)
+- [Analisa](#Analisa)
+- [Referensi](#referensi)
+---
+
+## A. Tujuan Praktikum
+Tujuan dari praktikum ini adalah untuk memahami konsep dasar container menggunakan Docker serta cara mengelola image dan container. Selain itu, praktikum ini bertujuan agar mahasiswa mampu menjalankan container sederhana, membuat image Docker sendiri, serta menyimpan image tersebut ke Docker Hub. Mahasiswa juga diharapkan dapat memahami cara menjalankan aplikasi berbasis container menggunakan berbagai konfigurasi seperti volume, multi container, dan docker-compose.
+
+## B. Dasar Teori
+Docker merupakan platform containerization yang digunakan untuk membuat, menjalankan, dan mengelola aplikasi di dalam container. Container adalah lingkungan virtual ringan yang berisi semua dependensi yang diperlukan oleh sebuah aplikasi sehingga aplikasi dapat berjalan secara konsisten di berbagai sistem operasi.
+
+Docker menggunakan konsep image dan container. Image merupakan template yang berisi sistem operasi, library, serta aplikasi yang dibutuhkan. Sedangkan container adalah instance yang berjalan dari sebuah image. Dengan menggunakan Docker, proses deployment aplikasi menjadi lebih cepat, ringan, dan konsisten dibandingkan dengan virtual machine.
+
+Docker juga menyediakan layanan Docker Hub, yaitu repository online yang digunakan untuk menyimpan dan membagikan Docker image kepada pengguna lain. Dengan Docker Hub, pengguna dapat melakukan pull atau push image dengan mudah.
+
+Dalam pengembangan aplikasi modern, Docker sering digunakan bersama teknologi lain seperti Node.js, database container, serta docker-compose untuk menjalankan beberapa container sekaligus dalam satu sistem.
+
+## C. Alat dan Bahan
+Alat dan bahan yang digunakan dalam praktikum ini adalah sebagai berikut:
+
+1. Laptop atau komputer yang telah terinstal sistem operasi Linux/Windows.
+
+2. Docker Engine yang telah terinstal pada sistem.
+
+3. Akses internet untuk mengunduh Docker image dari Docker Hub.
+
+4. Docker Hub account untuk menyimpan dan membagikan image.
+
+5. Terminal atau command line.
+
+6. Text editor seperti VSCode atau Nano untuk membuat file program dan Dockerfile.
+
+7. Node.js dan npm untuk menjalankan aplikasi berbasis Node.js.
+
+## D. Langkah Kerja
+1. Memeriksa instalasi Docker dengan menjalankan perintah:
+docker version
+
+2. Memeriksa daftar image yang tersedia pada sistem:
+docker images
+
+3. Menjalankan container menggunakan image hello-world:
+docker run hello-world
+
+4. Mengunduh image Linux Alpine dari Docker Hub:
+docker pull alpine
+
+5. Menjalankan container Alpine dalam mode interaktif:
+docker run -it alpine
+
+6. Membuat akun pada Docker Hub dan membuat repository baru.
+
+7. Membuat program sederhana menggunakan bahasa Go dan membuat file Dockerfile.
+
+8. Membangun Docker image menggunakan perintah:
+docker build -t username/salam .
+
+9. Login ke Docker Hub dan mengunggah image:
+docker login
+docker push username/salam
+
+10. Menjalankan image dari Docker Hub menggunakan perintah:
+docker run username/salam
+
+## E. Hasil dan Pembahasan
+Hasil
+Lab1.1: Docker Image "hello-world"
+
+
+
+## F. Kesimpulan
+
+## G. Analisa
+
+## H. Referensi
+Muhammad Davi. Modul Praktikum Cloud Computing – Docker. Politeknik Negeri Lhokseumawe, 2024.
+>>>>>>> 7f806a9e465ba17f23639da85a62bbb73e9350c8
