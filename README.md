@@ -283,7 +283,7 @@ Selanjutnya  membuat Dockerfile menggunakan kode berikut ini:
 DockerFile :
 Dockerfile berisi instruksi untuk mengemas aplikasi Node.js ke dalam image Docker.
 ![ DockerFile](img2/Docker%20File.jpg)
-
+5
 docker build & docker tag :
 Digunakan untuk membuat image dan memberikan nama serta versi agar mudah dikenali.
 ![ docekrtag](img2/docker%20tag.jpg)
